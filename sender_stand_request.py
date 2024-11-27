@@ -23,7 +23,7 @@ def create_personal_kit(auth_token, kit_name):
         "Authorization": f"Bearer {auth_token}",
         "Content-Type": "application/json"
     }
-    kit_body = {"name": kit_name}  # Crear el cuerpo directamente sin copiar
+    kit_body = {"name": kit_name}
 
     try:
         response = requests.post(URL_SERVICE + KITS_PATH, json=kit_body, headers=headers)
